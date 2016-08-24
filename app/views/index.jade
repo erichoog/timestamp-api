@@ -1,0 +1,27 @@
+
+extends layout
+
+block content
+  div.container
+    h1 #{mainHeader}
+      blockquote
+        p User stories:
+          ol
+            li I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).
+            br
+            li If it does, it returns both the Unix timestamp and the natural language form of that date.
+            br
+            li If it does not contain a date or Unix timestamp, it returns null for those properties.
+                    
+    h3 Example usage:
+    p
+      code https://codecamp-api-project-eric-hoog.c9users.io/October%2014,%202014
+    p
+      code https://codecamp-api-project-eric-hoog.c9users.io/1413244800
+      
+    h3 Example output:
+    p
+      code {"unix":1413244800,"natural":"October 14, 2014"}
+//   #users
+//     for user in users
+//       include user
