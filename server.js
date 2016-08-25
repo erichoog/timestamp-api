@@ -4,6 +4,8 @@ var app = express();
 var path = require('path');
 var viewPath = path.join(__dirname, 'app/views');
 
+
+app.locals.pretty = true;
 app.set('port', (process.env.PORT || 8080));
 
 app.get('/', function (req, res) {
